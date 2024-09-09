@@ -48,7 +48,7 @@ export default function Page() {
     };
 
     return (
-        <div className="bg-background min-h-screen">
+        <div className="min-h-screen">
             <div className="absolute top-4 right-4 p-2 rounded-md shadow-md">
                 <ModeToggle/>
             </div>
