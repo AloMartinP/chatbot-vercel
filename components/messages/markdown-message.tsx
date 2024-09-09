@@ -9,7 +9,7 @@ interface MarkdownMessageProps {
 }
 
 const MarkdownMessage: React.FC<MarkdownMessageProps> = ({ content }) => (
-    <div className="prose dark:prose-dark">
+    <div>
         <Markdown
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeHighlight, rehypeSanitize]}

@@ -10,6 +10,7 @@ const Chat = () => {
     const [textareaValue, setTextareaValue] = useState(input);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
+    // Muudab textarea kõrgust vastavalt sisule (kuni 200px)
     const adjustTextareaHeight = () => {
         const textarea = textareaRef.current;
         if (textarea) {
@@ -35,7 +36,7 @@ const Chat = () => {
         }
     };
 
-
+    // Enteri vajutamisel saadab sõnumi, kui teksti sisu on olemas, toetab ka shifti kasutamist ridade lisamiseks
     const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
         if (e.key === "Enter" && !e.shiftKey) {
             e.preventDefault();

@@ -1,8 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
-
-First, run the development server:
+## Running development server
 
 ```bash
 npm run dev
@@ -13,24 +11,19 @@ pnpm dev
 # or
 bun dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Projekt on lihtsa struktuuriga, üks leht ja api kus on post meetod openai-le päringute tegemiseks.
+Kuna aeg oli piiratud ei hakanud lisama vestluste salvestamist ja muid ägedaid funktsioone.
+Otsustasin teha midagi lihtsat ja töökindlat mida saab kasutada nii telefonis kui ka arvutis mugavalt.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Kasutaja mugavuse seisukohalt on rakendus intuitiivne. Sul on sõnumi esitamise riba ekraani all ning vasutsed jooksevad kesksel. Sinu esitatud sõnum ilmub paremale poole jutuaknas ning sellel on ka oranž kastikene ümber, et eristada ai tekstist.
 
-## Learn More
+Värviskeemi valikul lähtusin antud chati teema kohaselt, milleks on raketid.
 
-To learn more about Next.js, take a look at the following resources:
+Kasutasin shadcn komponente kuna tahtsin proovida uut tehnoloogiat ning kujundasin elemente tailwindcss abil. Ma pole kumbagi tehnoloogiat varem kuigi palju kasutanud ja tahtsi proovida midagi uut. Tailwind hakkas täitsa meeldima kuna seda oli väga lihtne ja mugav kasutada.
+Olles varem MaterialUI komponente kasutanud siis peaks mainima et shadcn-ga kohaldumine tundus isegi kiirem ja lihtsam.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Testimisel kasutaksin kindlasti Vitesti unit testide jaoks ning cypressi integratsioonitestide jaoks. Neid saab peale buildimist github actionite abil ilusti jooksutada.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Antud rakenduse peamine oht on openai api kasutamine kuna see ei ole piiratud. Peaks lisama lihtsama autentimise rakendusele ja piirama mitte autentitud kasutajate päringuid.
