@@ -1,4 +1,4 @@
-import {ThemeProvider} from "@/components/theme-provider";
+import {ThemeProvider} from "@/components/utility/theme-provider";
 import type {Metadata} from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -25,14 +25,7 @@ export default function RootLayout({children}: Readonly<{
     return (
         <html lang="en">
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
-                >
                     {children}
-                </ThemeProvider>
             </body>
         </html>
     );
