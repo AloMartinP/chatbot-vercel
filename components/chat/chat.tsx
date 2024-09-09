@@ -46,7 +46,7 @@ const Chat = () => {
     };
 
     return (
-        <div className="flex flex-col w-full max-w-2xl py-24 mx-auto">
+        <div className="flex flex-col w-full max-w-2xl py-24 mx-auto bg-background">
             {messages.map(m => (
                 <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'} mb-2`}>
                     <div
@@ -60,7 +60,7 @@ const Chat = () => {
 
             <form onSubmit={handleFormSubmit}>
                 <div
-                    className="flex items-center bg-background fixed bottom-0 w-full max-w-2xl p-2 mb-8 shadow-xl rounded-2xl border focus-visible:ring-1">
+                    className="flex items-center bg-background fixed bottom-0 w-full max-w-2xl p-2 mb-8 shadow-xl rounded-2xl border focus-visible:ring-1 px-4">
                     <Textarea
                         ref={textareaRef}
                         placeholder="Say something..."
