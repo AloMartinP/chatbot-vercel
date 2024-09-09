@@ -2,15 +2,14 @@
 
 import {ModeToggle} from "@/components/ui/mode-toggle";
 import Chat from "@/components/chat/chat";
+import Header from "@/components/navigation/header";
 
 
 export default function Page() {
     return (
-        <div className="min-h-screen">
-            <div className="absolute top-4 right-4 p-2 rounded-md shadow-md">
-                <ModeToggle/>
-            </div>
+        <>
+            <Header/>
             <Chat/>
-        </div>
+        </>
     );
 }
