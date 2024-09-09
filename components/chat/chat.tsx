@@ -41,7 +41,7 @@ const Chat = () => {
         if (e.key === "Enter" && !e.shiftKey) {
             e.preventDefault();
             if (textareaValue.trim().length > 0) {
-                handleFormSubmit(e as any);
+                handleFormSubmit(e as React.FormEvent);
             }
         }
     };
